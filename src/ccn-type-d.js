@@ -65,7 +65,7 @@ class CookieConsentNotice {
                                           <button type="button" id="acceptCookies" class="btn__accept accept__btn__styles" style="color: ${this.banner.acceptBtn.color}; background-color: ${this.banner.acceptBtn.background};">
                                               ${this.banner.acceptBtn.text}
                                           </button>
-                                          <button type="button" id="settingsCookies" class="btn__settings settings__btn__styles" style="color: ${this.banner.settingsBtn.color}; border: ${this.banner.settingsBtn.border}; background-color: ${this.banner.settingsBtn.background};">
+                                          <button type="button" id="settingsCookies" class="btn__settings settings__btn__styles" style="color: ${this.banner.settingsBtn.color}; background-color: ${this.banner.settingsBtn.background};">
                                               ${this.banner.settingsBtn.text}
                                           </button>
                                           <button type="button" id="rejectCookies" class="btn__settings settings__btn__styles" style="color: ${this.banner.rejectBtn.color}; background-color: ${this.banner.rejectBtn.background};">
@@ -118,8 +118,8 @@ class CookieConsentNotice {
     document.getElementById("settingsCookies").style.display = "none";
     document.getElementById("rejectCookies").innerHTML = "Save & Close";
     document.getElementById("rejectCookies").style.width = "48%";
-    document.getElementsByClassName('chkbox__section')[0].innerHTML = `<label class="container">Neccesary
-    <input type="checkbox" checked="checked">
+    document.getElementsByClassName('chkbox__section')[0].innerHTML = `<label class="container">Neccesary (Always on)
+    <input type="checkbox" checked="checked" disabled>
     <span class="checkmark"></span>
     </label>            
     <label class="container">Personalisation & Design
@@ -301,14 +301,13 @@ class CookieConsentNotice {
       },
       settingsBtn: {
         text: obj.settingsBtnText || lang.settingsBtnText,
-        background: obj.settingsBtnBackground || '#eeeeee',
-        color: obj.settingsBtnColor || '#4a4a4a',
-        border: obj.settingsBtnBorder || '2px solid #4a4a4a'
+        background: obj.settingsBtnBackground || '#209cee',
+        color: obj.settingsBtnColor || '#fff'
       },
       rejectBtn: {
         text: obj.rejectBtnText || lang.rejectBtnText,
-        background: obj.rejectBtnBackground || '#eeeeee',
-        color: obj.rejectBtnColor || '#4a4a4a'
+        background: obj.rejectBtnBackground || '#209cee',
+        color: obj.rejectBtnColor || '#fff'
       },
       manageCookies: {
         color: obj.manageColor || '#4a4a4a',

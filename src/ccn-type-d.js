@@ -140,7 +140,6 @@ class CookieConsentNotice {
     </label>`;
 }
 
-
   acceptCookies() {
     localStorage.setItem("CookieConsentNotice", "1")
     this.openManageCookies()
